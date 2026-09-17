@@ -2,17 +2,16 @@
 
 import { useState } from "react";
 
-type LikeButtonProps = {
-  initialLikes: number;
-};
-
-export default function LikeButton({ initialLikes }: LikeButtonProps) {
-  const [likes, setLikes] = useState<number>(initialLikes);
+export default function LikeButton({ initialLikes }: { initialLikes: number }) {
+  const [likes, setLikes] = useState(initialLikes);
 
   return (
-  <button className="bg-brand-coral/10 text-brand-coral px-4 py-2 rounded-lg font-medium hover:bg-brand-coral/20">
-  <span>❤</span>
-  <span>{likes}</span>
-</button>
+    <button
+      onClick={() => setLikes(likes + 1)}
+      className="flex items-center gap-1.5 bg-[#D1495B]/10 text-[#D1495B] px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-[#D1495B]/25 transition-colors cursor-pointer"
+    >
+      <span>❤</span>
+      <span>{likes} likes</span>
+    </button>
   );
 }
