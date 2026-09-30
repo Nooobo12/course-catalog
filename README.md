@@ -8,3 +8,9 @@ A semester project course catalog built with Next.js 16 (App Router), TypeScript
 - **Dynamic Routes & Pre-rendering:** Configured the dynamic course route (`/courses/[id]`) with `generateStaticParams`, loading states (`loading.tsx`), and error/not-found boundaries (`not-found.tsx`).
 - **Server and Client Component Pairing:** Created modular components including a server-fetched `CourseCard` and an interactive `LikeButton` Client Component utilizing `useState`.
 - **Global Navigation & Styling:** Styled the application layout with Tailwind CSS and persistent navigation links.
+
+## Updates (Styling & UI)
+* Integrated **shadcn/ui** components (`Card`, `CardHeader`, `CardTitle`, `CardContent`, and `Button`) into the course catalog[cite: 4, 6].
+* Implemented a fully responsive multi-column grid layout (scaling from mobile up to widescreen)[cite: 5].
+* Styled the main navigation with a clean layout, spacing, and hover states[cite: 5].
+* Applied a custom color palette using Tailwind CSS[cite: 7].

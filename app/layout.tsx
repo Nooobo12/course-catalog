@@ -8,21 +8,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-900 min-h-screen">
-       <header className="bg-brand-dark text-white shadow-md">
-        <nav className="max-w-5xl mx-auto px-6 py-4 flex gap-6 font-medium">
-      <Link href="/" className="hover:text-brand-yellow transition-colors">
-       Home
-      </Link>
-       <Link href="/courses" className="hover:text-brand-yellow transition-colors">
-      Courses
-       </Link>
-       <Link href="/about" className="hover:text-brand-yellow transition-colors">
-      About
-    </Link>
-  </nav>
-</header>
-        <main className="max-w-5xl mx-auto px-6 py-8">{children}</main>
+      <body>
+        <nav className="flex gap-4 px-6 py-4 border-b border-slate-200">
+          <Link href="/" className="px-3 py-2 rounded-md hover:bg-slate-100 font-medium">
+            Home
+          </Link>
+          <Link href="/courses" className="px-3 py-2 rounded-md hover:bg-slate-100 font-medium">
+            Courses
+          </Link>
+          <Link href="/about" className="px-3 py-2 rounded-md hover:bg-slate-100 font-medium">
+            About
+          </Link>
+        </nav>
+        {children}
       </body>
     </html>
   );
